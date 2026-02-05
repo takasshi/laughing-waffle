@@ -85,6 +85,36 @@
     .tool-section-title span.emoji {
       font-size: 1.2rem;
     }
+/* スマホ向けレイアウト調整 */
+@media (max-width: 640px) {
+  body {
+    padding: 0 1.25rem 3rem;
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  p.lead {
+    font-size: 0.95rem;
+  }
+
+  .tool-item {
+    padding: 1rem;
+  }
+
+  .tool-item h2 {
+    font-size: 1rem;
+  }
+}
+
+/* ちょっと広めの画面でのバランス調整（任意） */
+@media (min-width: 1024px) {
+  body {
+    font-size: 15px;
+  }
+}
 
   </style>
 </head>
