@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Yori – トップページ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+  <header class="yori-header">
+    <div class="yori-header-inner">
+      <h1 class="yori-site-title"><a href="/">Yori</a></h1>
+
+      <nav class="yori-site-nav">
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/links/">Links</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- 投稿一覧 -->
+ <div class="container">
+  <main class="yori-main">
+  <!-- 検索 -->
+<form class="yori-search yori-search--timeline" action="/search" method="get" role="search">
+  <label class="yori-search-label" for="yori-search-input">検索</label>
+  <input
+    id="yori-search-input"
+    class="yori-search-input"
+    type="search"
+    name="q"
+    placeholder="キーワードを入力"
+    autocomplete="off">
+  <button class="yori-search-button" type="submit">検索</button>
+</form>
+<section class="yori-timeline" aria-label="投稿一覧">
+
+  <!-- ピン留め -->
+  <article class="yori-post yori-post--pinned">
+    <div class="yori-post-avatar">
+      <img src="media/avatar.png" alt="">
+    </div>
+
+    <div class="yori-post-main">
+      <h2 class="yori-post-title"><a href="/post/pinned">ピン留め：このテーマの使い方</a></h2>
+
+      <header class="yori-post-header">
+        <span class="yori-post-name">あなた</span>
+        <span class="yori-post-handle">@user</span>
+        <time class="yori-post-time" datetime="2026-02-02T09:10:00">
+          <a href="/post/pinned">2026-02-02 09:10</a>
+        </time>
+        <span class="yori-post-pin-label">📌 ピン留め</span>
+      </header>
+
+      <section class="yori-post-text">
+        <p><span class="yori-text-lg">固定ポストです。</span> 仕様メモやリンク集を置く想定。</p>
+        <p>・画像は自動で横幅にフィット<br>・YouTubeは16:9固定<br>・カテゴリ/タグは任意</p>
+      </section>
+
+      <footer class="yori-post-footer">
+        <div class="yori-post-category">
+          <span class="yori-post-meta-label">カテゴリ：</span>
+          <a href="/category/info/" class="yori-post-category-link">お知らせ</a>
+        </div>
+        <div class="yori-post-tags">
+          <span class="yori-post-meta-label">タグ：</span>
+          <ul class="yori-post-tags-list">
+            <li class="yori-post-tag-item"><a href="/tag/yori/" class="yori-post-tag-link">Yori</a></li>
+            <li class="yori-post-tag-item"><a href="/tag/howto/" class="yori-post-tag-link">使い方</a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+  </article>
+
+  <!-- テキストのみ：短文 -->
+  <article class="yori-post">
+    <div class="yori-post-avatar">
+      <img src="media/avatar.png" alt="">
+    </div>
+
+    <div class="yori-post-main">
+      <h2 class="yori-post-title"><a href="/post/short">短文投稿</a></h2>
+
+      <header class="yori-post-header">
+        <span class="yori-post-name">あなた</span>
+        <span class="yori-post-handle">@user</span>
+        <time class="yori-post-time" datetime="2026-02-02T10:02:00">
+          <a href="/post/short">2026-02-02 10:02</a>
+        </time>
+      </header>
+
+      <section class="yori-post-text">
+        <p>今日はミニブログ整備の日。</p>
+      </section>
+
+      <footer class="yori-post-footer">
+        <div class="yori-post-category">
+          <span class="yori-post-meta-label">カテゴリ：</span>
+          <a href="/category/diary/" class="yori-post-category-link">日記</a>
+        </div>
+        <div class="yori-post-tags">
+          <span class="yori-post-meta-label">タグ：</span>
+          <ul class="yori-post-tags-list">
+            <li class="yori-post-tag-item"><a href="/tag/bludit/" class="yori-post-tag-link">Bludit</a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+  </article>
+
+  <!-- 画像付き：1枚 -->
+  <article class="yori-post">
+    <div class="yori-post-avatar">
+      <img src="media/avatar.png" alt="">
+    </div>
+
+    <div class="yori-post-main">
+      <h2 class="yori-post-title"><a href="/post/photo-1">写真：1枚</a></h2>
+
+      <header class="yori-post-header">
+        <span class="yori-post-name">あなた</span>
+        <span class="yori-post-handle">@user</span>
+        <time class="yori-post-time" datetime="2026-02-02T11:40:00">
+          <a href="/post/photo-1">2026-02-02 11:40</a>
+        </time>
+      </header>
+
+      <figure class="yori-media yori-media-image">
+        <img src="https://picsum.photos/1200/700?random=101" alt="サンプル画像">
+      </figure>
+
+      <section class="yori-post-text">
+        <p>横幅はみ出ししない確認用。</p>
+      </section>
+
+      <footer class="yori-post-footer">
+        <div class="yori-post-category">
+          <span class="yori-post-meta-label">カテゴリ：</span>
+          <a href="/category/photo/" class="yori-post-category-link">写真</a>
+        </div>
+        <div class="yori-post-tags">
+          <span class="yori-post-meta-label">タグ：</span>
+          <ul class="yori-post-tags-list">
+            <li class="yori-post-tag-item"><a href="/tag/media/" class="yori-post-tag-link">メディア</a></li>
+            <li class="yori-post-tag-item"><a href="/tag/layout/" class="yori-post-tag-link">レイアウト</a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+  </article>
+
+  <!-- 長文：改行多め＋装飾 -->
+  <article class="yori-post">
+    <div class="yori-post-avatar">
+      <img src="media/avatar.png" alt="">
+    </div>
+
+    <div class="yori-post-main">
+      <h2 class="yori-post-title"><a href="/post/long">長文テスト</a></h2>
+
+      <header class="yori-post-header">
+        <span class="yori-post-name">あなた</span>
+        <span class="yori-post-handle">@user</span>
+        <time class="yori-post-time" datetime="2026-02-02T12:18:00">
+          <a href="/post/long">2026-02-02 12:18</a>
+        </time>
+      </header>
+
+      <section class="yori-post-text">
+        <p><span class="yori-text-lg">長文になったときの行間と余白</span>を確認します。</p>
+        <p>
+          <strong>太字</strong>、<del>取り消し線</del>、<code>inline code</code> を混ぜても破綻しない想定。
+        </p>
+        <blockquote class="yori-quote">
+          <p>「引用」が入ると、タイムラインの面の中でどう見えるか。</p>
+          <p>複数段落でも崩れないか。</p>
+        </blockquote>
+        <p>URLっぽい長い文字列テスト：aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+      </section>
+
+      <footer class="yori-post-footer">
+        <div class="yori-post-category">
+          <span class="yori-post-meta-label">カテゴリ：</span>
+          <a href="/category/memo/" class="yori-post-category-link">メモ</a>
+        </div>
+        <div class="yori-post-tags">
+          <span class="yori-post-meta-label">タグ：</span>
+          <ul class="yori-post-tags-list">
+            <li class="yori-post-tag-item"><a href="/tag/typography/" class="yori-post-tag-link">文字</a></li>
+            <li class="yori-post-tag-item"><a href="/tag/test/" class="yori-post-tag-link">テスト</a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+  </article>
+
+  <!-- YouTube埋め込み -->
+  <article class="yori-post">
+    <div class="yori-post-avatar">
+      <img src="media/avatar.png" alt="">
+    </div>
+
+    <div class="yori-post-main">
+      <h2 class="yori-post-title"><a href="/post/video">動画投稿</a></h2>
+
+      <header class="yori-post-header">
+        <span class="yori-post-name">あなた</span>
+        <span class="yori-post-handle">@user</span>
+        <time class="yori-post-time" datetime="2026-02-02T13:05:00">
+          <a href="/post/video">2026-02-02 13:05</a>
+        </time>
+      </header>
+
+      <section class="yori-post-text">
+        <p>動画のレスポンシブ確認。</p>
+      </section>
+
+      <figure class="yori-media yori-media-youtube">
+        <iframe
+          src="https://www.youtube.com/embed/VIDEO_ID"
+          title="YouTube動画プレーヤー"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </figure>
+
+      <footer class="yori-post-footer">
+        <div class="yori-post-category">
+          <span class="yori-post-meta-label">カテゴリ：</span>
+          <a href="/category/video/" class="yori-post-category-link">動画</a>
+        </div>
+        <div class="yori-post-tags">
+          <span class="yori-post-meta-label">タグ：</span>
+          <ul class="yori-post-tags-list">
+            <li class="yori-post-tag-item"><a href="/tag/youtube/" class="yori-post-tag-link">YouTube</a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+  </article>
+
+  <!-- タグ無し（カテゴリだけ） -->
+  <article class="yori-post">
+    <div class="yori-post-avatar">
+      <img src="media/avatar.png" alt="">
+    </div>
+
+    <div class="yori-post-main">
+      <h2 class="yori-post-title"><a href="/post/no-tags">タグなし</a></h2>
+
+      <header class="yori-post-header">
+        <span class="yori-post-name">あなた</span>
+        <span class="yori-post-handle">@user</span>
+        <time class="yori-post-time" datetime="2026-02-02T14:22:00">
+          <a href="/post/no-tags">2026-02-02 14:22</a>
+        </time>
+      </header>
+
+      <section class="yori-post-text">
+        <p>タグが無い時のフッターの並び確認。</p>
+      </section>
+
+      <footer class="yori-post-footer">
+        <div class="yori-post-category">
+          <span class="yori-post-meta-label">カテゴリ：</span>
+          <a href="/category/memo/" class="yori-post-category-link">メモ</a>
+        </div>
+      </footer>
+    </div>
+  </article>
+
+  <!-- カテゴリ無し（タグだけ） -->
+  <article class="yori-post">
+    <div class="yori-post-avatar">
+      <img src="media/avatar.png" alt="">
+    </div>
+
+    <div class="yori-post-main">
+      <h2 class="yori-post-title"><a href="/post/no-category">カテゴリなし</a></h2>
+
+      <header class="yori-post-header">
+        <span class="yori-post-name">あなた</span>
+        <span class="yori-post-handle">@user</span>
+        <time class="yori-post-time" datetime="2026-02-02T15:08:00">
+          <a href="/post/no-category">2026-02-02 15:08</a>
+        </time>
+      </header>
+
+      <section class="yori-post-text">
+        <p>カテゴリが無い時の確認。タグだけでも自然に見えるように。</p>
+      </section>
+
+      <footer class="yori-post-footer">
+        <div class="yori-post-tags">
+          <span class="yori-post-meta-label">タグ：</span>
+          <ul class="yori-post-tags-list">
+            <li class="yori-post-tag-item"><a href="/tag/note/" class="yori-post-tag-link">雑記</a></li>
+            <li class="yori-post-tag-item"><a href="/tag/ui/" class="yori-post-tag-link">UI</a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+  </article>
+
+</section>
+
+    <!-- ページネーション -->
+    <nav class="yori-pagination" aria-label="ページナビゲーション">
+      <ul class="yori-pagination-list">
+        <!-- 前のページ -->
+        <li class="yori-pagination-item yori-pagination-prev">
+          <a href="/page/1/" rel="prev">前へ</a>
+        </li>
+
+        <!-- 数字リンク -->
+        <li class="yori-pagination-item yori-pagination-number">
+          <a href="/page/1/">1</a>
+        </li>
+        <li class="yori-pagination-item yori-pagination-number">
+          <span aria-current="page">2</span>
+        </li>
+        <li class="yori-pagination-item yori-pagination-number">
+          <a href="/page/3/">3</a>
+        </li>
+
+        <!-- 次のページ -->
+        <li class="yori-pagination-item yori-pagination-next">
+          <a href="/page/3/" rel="next">次へ</a>
+        </li>
+      </ul>
+    </nav>
+
+  </main>
+
+  <!-- フッター -->
+  <footer class="yori-footer">
+    <div class="yori-footer-inner">
+      <div class="yori-footer-line">
+        <span class="yori-footer-sitename">Yori</span>
+        <span class="yori-footer-admin">
+          <a href="/admin/">admin</a>
+        </span>
+      </div>
+      <p class="yori-poweredby">
+        © 2026 管理者名
+      </p>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
